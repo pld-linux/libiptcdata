@@ -3,11 +3,11 @@ Summary(pl):	Biblioteka do manipulacji metadanymi IPTC
 Name:		libiptcdata
 Version:	0.2.1
 Release:	1
-License:	GPL v.2
+License:	GPL v2
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libiptcdata/%{name}-%{version}.tar.gz
 # Source0-md5:	2df9620f8c08aba4ccbe434032ff320d
-URL:		http://libiptcdata.sourceforge.net
+URL:		http://libiptcdata.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk-doc
