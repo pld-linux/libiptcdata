@@ -1,5 +1,5 @@
 Summary:	Library for IPTC metadata manipulation
-Summary(pl):	Biblioteka do manipulacji metadanymi IPTC
+Summary(pl.UTF-8):   Biblioteka do manipulacji metadanymi IPTC
 Name:		libiptcdata
 Version:	0.2.1
 Release:	1
@@ -22,36 +22,36 @@ captions and keywords, often used by popular photo management
 applications. The library provides routines for parsing, viewing,
 modifying, and saving this metadata.
 
-%description -l pl
-libiptcdata jest bibliotek± napisan± w C pozwalaj±ca na manipulowanie
+%description -l pl.UTF-8
+libiptcdata jest bibliotekÄ… napisanÄ… w C pozwalajÄ…ca na manipulowanie
 metadanymi International Press Telecommunications Council (IPTC),
-zapisanymi w plikach multimedialnych jak np. obrazy. Metadane te mog±
-zawieraæ tytu³ i s³owa kluczowe, czêsto u¿ywane przez popularne
-programy zarz±dzaj±ce kolekcjami zdjêæ. Biblioteka dostarcza procedury
-do parsowania, ogl±dania, modyfikowania i zapisywania metadanych.
+zapisanymi w plikach multimedialnych jak np. obrazy. Metadane te mogÄ…
+zawieraÄ‡ tytuÅ‚ i sÅ‚owa kluczowe, czÄ™sto uÅ¼ywane przez popularne
+programy zarzÄ…dzajÄ…ce kolekcjami zdjÄ™Ä‡. Biblioteka dostarcza procedury
+do parsowania, oglÄ…dania, modyfikowania i zapisywania metadanych.
 
 %package devel
 Summary:	Header files for libiptcdata library
-Summary(pl):	Pliki nag³ówkowe biblioteki libiptcdata
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libiptcdata
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for libiptcdata library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki libiptcdata.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki libiptcdata.
 
 %package static
 Summary:	Static libiptcdata library
-Summary(pl):	Statyczna biblioteka libiptcdata
+Summary(pl.UTF-8):   Statyczna biblioteka libiptcdata
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libiptcdata library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libiptcdata.
 
 %prep
