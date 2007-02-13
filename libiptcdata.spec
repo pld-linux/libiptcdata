@@ -1,5 +1,5 @@
 Summary:	Library for IPTC metadata manipulation
-Summary(pl.UTF-8):   Biblioteka do manipulacji metadanymi IPTC
+Summary(pl.UTF-8):	Biblioteka do manipulacji metadanymi IPTC
 Name:		libiptcdata
 Version:	0.2.1
 Release:	1
@@ -32,7 +32,7 @@ do parsowania, oglądania, modyfikowania i zapisywania metadanych.
 
 %package devel
 Summary:	Header files for libiptcdata library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libiptcdata
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libiptcdata
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -44,7 +44,7 @@ Pliki nagłówkowe biblioteki libiptcdata.
 
 %package static
 Summary:	Static libiptcdata library
-Summary(pl.UTF-8):   Statyczna biblioteka libiptcdata
+Summary(pl.UTF-8):	Statyczna biblioteka libiptcdata
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
