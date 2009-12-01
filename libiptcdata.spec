@@ -10,8 +10,10 @@ Source0:	http://dl.sourceforge.net/libiptcdata/%{name}-%{version}.tar.gz
 URL:		http://libiptcdata.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	gtk-doc >= 1.0
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
