@@ -10,7 +10,7 @@ Source0:	http://downloads.sourceforge.net/libiptcdata/%{name}-%{version}.tar.gz
 URL:		http://libiptcdata.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-devel >= 0.13.1
 BuildRequires:	gtk-doc >= 1.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
@@ -94,9 +94,9 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 # libiptcdata and iptc domains (no translations yet)
-#find_lang %{name} --all-name
+%find_lang %{name} --all-name
 
-rm -f $RPM_BUILD_ROOT%{py_sitedir}/iptcdata.{la,a}
+%{__rm} $RPM_BUILD_ROOT%{py_sitedir}/iptcdata.{la,a}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -104,12 +104,12 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-%files
-# -f %{name}.lang
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/iptc
 %attr(755,root,root) %{_libdir}/libiptcdata.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libiptcdata.so.0
 
 %files devel
 %defattr(644,root,root,755)
