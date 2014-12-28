@@ -10,7 +10,7 @@ Source0:	http://downloads.sourceforge.net/libiptcdata/%{name}-%{version}.tar.gz
 URL:		http://libiptcdata.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	gettext-devel >= 0.13.1
+BuildRequires:	gettext-tools >= 0.13.1
 BuildRequires:	gtk-doc >= 1.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
