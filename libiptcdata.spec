@@ -1,17 +1,22 @@
+#
+# Conditional build:
+%bcond_without	static_libs	# static library
+
 Summary:	Library for IPTC metadata manipulation
 Summary(pl.UTF-8):	Biblioteka do manipulacji metadanymi IPTC
 Name:		libiptcdata
-Version:	1.0.4
-Release:	5
+Version:	1.0.5
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://downloads.sourceforge.net/libiptcdata/%{name}-%{version}.tar.gz
-# Source0-md5:	af886556ecb129b694f2d365d03d95a8
+#Source0Download: https://github.com/ianw/libiptcdata/releases
+Source0:	https://github.com/ianw/libiptcdata/releases/download/release_1_0_5/%{name}-%{version}.tar.gz
+# Source0-md5:	c04bc1375c280d41c0106255d1df711a
 URL:		http://libiptcdata.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	gettext-tools >= 0.13.1
-BuildRequires:	gtk-doc >= 1.0
+BuildRequires:	gtk-doc >= 1.14
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	python-devel
@@ -83,7 +88,7 @@ Wiązanie Pythona do libiptcdata.
 %{__automake}
 %configure \
 	--enable-python \
-	--enable-static \
+	%{?with_static_libs:--enable-static} \
 	--with-html-dir=%{_gtkdocdir}
 %{__make}
 
@@ -96,7 +101,10 @@ rm -rf $RPM_BUILD_ROOT
 # libiptcdata and iptc domains (no translations yet)
 %find_lang %{name} --all-name
 
-%{__rm} $RPM_BUILD_ROOT%{py_sitedir}/iptcdata.{la,a}
+%{__rm} $RPM_BUILD_ROOT%{py_sitedir}/iptcdata.la
+%if %{with static_libs}
+%{__rm} $RPM_BUILD_ROOT%{py_sitedir}/iptcdata.a
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -119,9 +127,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_pkgconfigdir}/libiptcdata.pc
 %{_gtkdocdir}/libiptcdata
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libiptcdata.a
+%endif
 
 %files -n python-iptcdata
 %defattr(644,root,root,755)
